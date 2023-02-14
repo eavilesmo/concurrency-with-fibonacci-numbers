@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class FibonacciNumbers {
 
-  public long generate(String inputNumber) {
+  public long generate(String inputNumber) throws InterruptedException {
     ArrayList<Long> fibonacciNumbers = new ArrayList<>();
     fibonacciNumbers.add(0L);
     fibonacciNumbers.add(1L);
@@ -17,6 +17,7 @@ public class FibonacciNumbers {
     }
 
     System.out.println(fibonacciNumbers.get(fibonacciNumbers.size() - 1));
+    Thread.sleep(5000);
 
     return fibonacciNumbers.get(fibonacciNumbers.size() - 1);
   }
