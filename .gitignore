@@ -168,7 +168,4 @@ gradle-app.setting
 # Java heap dump
 *.hprof
 
-*.bin
-*.lock
-
 # End of https://www.toptal.com/developers/gitignore/api/intellij,gradle,java
