@@ -1,12 +1,13 @@
 import domain.FibonacciNumbers;
+import infrastructure.CliController;
 import infrastructure.CliPresenter;
 
 public class Main {
 
   public static void main(String[] args) {
     CliPresenter cliPresenter = new CliPresenter();
-    cliPresenter.displayOptions();
     FibonacciNumbers fibonacciNumbers = new FibonacciNumbers();
-    fibonacciNumbers.generate("7");
+    CliController cliController = new CliController(cliPresenter, fibonacciNumbers);
+    cliController.startProgram();
   }
 }
