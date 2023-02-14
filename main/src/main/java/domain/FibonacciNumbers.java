@@ -1,3 +1,5 @@
+package domain;
+
 import java.util.ArrayList;
 
 public class FibonacciNumbers {
@@ -18,5 +20,4 @@ public class FibonacciNumbers {
 
     return fibonacciNumbers.get(fibonacciNumbers.size() - 1);
   }
-
 }
