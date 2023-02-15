@@ -23,10 +23,10 @@ public class CliPresenter {
     }
   }
 
-  public void displayResults(ArrayList<Result> results) {
+  public void displayResults(ArrayList<Calculation> calculations) {
     System.out.println();
-    for (Result result : results) {
-      System.out.println("Results of calculating Fibonacci numbers until " + result.getLimitNumber() + ": " + result.getResult());
+    for (Calculation calculation : calculations) {
+      System.out.println("Results of calculating Fibonacci numbers until " + calculation.limitNumber() + ": " + calculation.result());
     }
   }
 

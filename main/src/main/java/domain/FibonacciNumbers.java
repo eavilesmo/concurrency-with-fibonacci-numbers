@@ -16,7 +16,7 @@ public class FibonacciNumbers {
       fibonacciNumbers.add(lastNumber + nextToLastNumber);
     }
 
-    Thread.sleep(10000);
+    Thread.sleep(20000);
 
     Long lastFibonacciNumber = fibonacciNumbers.get(fibonacciNumbers.size() - 1);
     return lastFibonacciNumber;
