@@ -5,12 +5,14 @@ import java.util.ArrayList;
 public class CliPresenter {
 
   public void displayOptions() {
+    System.out.println();
     System.out.println("Choose one of the following options:");
     System.out.println("0 - Show created tasks");
     System.out.println("1 - Create new task");
     System.out.println("2 - Start a task");
     System.out.println("3 - See results of completed tasks");
     System.out.println("4 - Exit program");
+    System.out.println();
   }
 
   public void displayThreads(ArrayList<Thread> threads) {
@@ -26,10 +28,12 @@ public class CliPresenter {
   }
 
   public void displayNotValidOptionMessage() {
+    System.out.println();
     System.out.println("Not a valid option, please try again.");
   }
 
   public void askUserForFibonacciCalculationNumber() {
+    System.out.println();
     System.out.println("Please introduce the number you want to calculate: ");
   }
 }
