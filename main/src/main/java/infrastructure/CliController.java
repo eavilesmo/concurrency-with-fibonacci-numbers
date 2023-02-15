@@ -19,9 +19,7 @@ public class CliController extends Thread {
 
   public void startProgram() {
     cliPresenter.displayOptions();
-    Scanner scanner = new Scanner(System.in);
-    String userInput = scanner.nextLine();
-    decideNextOption(userInput);
+    decideNextOption(getUserInput());
   }
 
   private void decideNextOption(String userInput) {
@@ -32,10 +30,9 @@ public class CliController extends Thread {
         break;
       case "1":
         System.out.println("Please introduce the number you want to calculate: ");
-        String input = new Scanner(System.in).nextLine();
         Runnable runnable = () -> {
           try {
-            long result = fibonacciNumbers.generate(input);
+            long result = fibonacciNumbers.generate(getUserInput());
             results.add(result);
           } catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -47,8 +44,7 @@ public class CliController extends Thread {
         break;
       case "2":
         System.out.println("Please introduce the number of the thread you want to start");
-        String inputNumber = new Scanner(System.in).nextLine();
-        int index = Integer.parseInt(inputNumber);
+        int index = Integer.parseInt(getUserInput());
         threads.get(index).start();
         System.out.println("Thread started: " + threads.get(index).getName());
         startProgram();
@@ -63,5 +59,9 @@ public class CliController extends Thread {
         cliPresenter.displayNotValidOptionMessage();
         startProgram();
     }
+  }
+
+  private String getUserInput() {
+    return new Scanner(System.in).nextLine();
   }
 }
