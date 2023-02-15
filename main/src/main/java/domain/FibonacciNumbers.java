@@ -17,7 +17,7 @@ public class FibonacciNumbers {
     }
 
     System.out.println(fibonacciNumbers.get(fibonacciNumbers.size() - 1));
-    Thread.sleep(5000);
+    Thread.sleep(10000);
 
     return fibonacciNumbers.get(fibonacciNumbers.size() - 1);
   }
