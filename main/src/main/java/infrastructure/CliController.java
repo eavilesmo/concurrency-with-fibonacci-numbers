@@ -60,7 +60,7 @@ public class CliController extends Thread {
       case "4":
         break;
       default:
-        System.out.println("Not a valid option, please try again.");
+        cliPresenter.displayNotValidOptionMessage();
         startProgram();
     }
   }

@@ -24,4 +24,8 @@ public class CliPresenter {
       System.out.println(result);
     }
   }
+
+  public void displayNotValidOptionMessage() {
+    System.out.println("Not a valid option, please try again.");
+  }
 }
