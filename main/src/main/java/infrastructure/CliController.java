@@ -33,9 +33,11 @@ public class CliController extends Thread {
         startProgram();
         break;
       case "1":
+        System.out.println("Please introduce the number you want to calculate: ");
+        String input = new Scanner(System.in).nextLine();
         Runnable runnable = () -> {
           try {
-            long result = fibonacciNumbers.generate(userInput);
+            long result = fibonacciNumbers.generate(input);
             results.add(result);
           } catch (InterruptedException e) {
             throw new RuntimeException(e);
