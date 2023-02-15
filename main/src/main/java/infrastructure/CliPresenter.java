@@ -36,4 +36,12 @@ public class CliPresenter {
     System.out.println();
     System.out.println("Please introduce the number you want to calculate: ");
   }
+
+  public void askUserForTaskToStart() {
+    System.out.println("Please introduce the number of the task you want to start");
+  }
+
+  public void displayStartedTask(String taskName) {
+    System.out.println("Task started: " + taskName);
+  }
 }

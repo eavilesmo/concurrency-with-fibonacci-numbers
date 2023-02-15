@@ -28,24 +28,30 @@ public class CliController extends Thread {
         cliPresenter.displayThreads(threads);
         runProgram();
         break;
+
       case "1":
         cliPresenter.askUserForFibonacciCalculationNumber();
         createThread();
         runProgram();
         break;
+
       case "2":
-        System.out.println("Please introduce the number of the thread you want to start");
+        cliPresenter.askUserForTaskToStart();
         int index = Integer.parseInt(getUserInput());
         threads.get(index).start();
-        System.out.println("Thread started: " + threads.get(index).getName());
+        String taskName = threads.get(index).getName();
+        cliPresenter.displayStartedTask(taskName);
         runProgram();
         break;
+
       case "3":
         cliPresenter.displayResults(results);
         runProgram();
         break;
+
       case "4":
         break;
+
       default:
         cliPresenter.displayNotValidOptionMessage();
         runProgram();
