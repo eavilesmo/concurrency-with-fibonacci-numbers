@@ -23,9 +23,10 @@ public class CliPresenter {
     }
   }
 
-  public void displayResults(ArrayList<Long> results) {
-    for (Long result : results) {
-      System.out.println(result);
+  public void displayResults(ArrayList<Result> results) {
+    System.out.println();
+    for (Result result : results) {
+      System.out.println("Results of calculating Fibonacci numbers until " + result.getInputNumber() + ": " + result.getResult());
     }
   }
 
@@ -40,10 +41,12 @@ public class CliPresenter {
   }
 
   public void askUserForTaskToStart() {
+    System.out.println();
     System.out.println("Please introduce the number of the task you want to start");
   }
 
   public void displayStartedTask(String taskName) {
+    System.out.println();
     System.out.println("Task started: " + taskName);
   }
 }

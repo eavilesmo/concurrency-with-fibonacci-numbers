@@ -17,7 +17,7 @@ public class CliController extends Thread {
 
   private final ArrayList<Thread> threads = new ArrayList<>();
   private final HashMap<Integer, String> threadData = new HashMap<>();
-  private final ArrayList<Long> results = new ArrayList<>();
+  private final ArrayList<Result> results = new ArrayList<>();
 
   public void runProgram() {
     cliPresenter.displayOptions();
@@ -65,7 +65,7 @@ public class CliController extends Thread {
     Runnable runnable = () -> {
       try {
         long result = fibonacciNumbers.generate(number);
-        results.add(result);
+        results.add(new Result(result, number));
       } catch (InterruptedException e) {
         throw new RuntimeException(e);
       }
