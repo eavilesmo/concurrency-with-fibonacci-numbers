@@ -26,7 +26,7 @@ public class CliPresenter {
   public void displayResults(ArrayList<Result> results) {
     System.out.println();
     for (Result result : results) {
-      System.out.println("Results of calculating Fibonacci numbers until " + result.getInputNumber() + ": " + result.getResult());
+      System.out.println("Results of calculating Fibonacci numbers until " + result.getLimitNumber() + ": " + result.getResult());
     }
   }
 

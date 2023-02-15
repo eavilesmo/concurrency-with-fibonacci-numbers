@@ -3,18 +3,18 @@ package infrastructure;
 public class Result {
 
   public final long result;
-  public final String inputNumber;
+  public final String limitNumber;
 
-  public Result(long result, String inputNumber) {
+  public Result(long result, String limitNumber) {
     this.result = result;
-    this.inputNumber = inputNumber;
+    this.limitNumber = limitNumber;
   }
 
   public long getResult() {
     return result;
   }
 
-  public String getInputNumber() {
-    return inputNumber;
+  public String getLimitNumber() {
+    return limitNumber;
   }
 }
