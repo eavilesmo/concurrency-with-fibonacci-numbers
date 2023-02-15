@@ -49,8 +49,8 @@ public class CliController extends Thread {
         break;
       case "2":
         System.out.println("Please introduce the number of the thread you want to start");
-        String input = new Scanner(System.in).nextLine();
-        int index = Integer.parseInt(input);
+        String inputNumber = new Scanner(System.in).nextLine();
+        int index = Integer.parseInt(inputNumber);
         threads.get(index).start();
         System.out.println("Thread started: " + threads.get(index).getName());
         startProgram();
