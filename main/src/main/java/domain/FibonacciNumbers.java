@@ -18,7 +18,7 @@ public class FibonacciNumbers {
 
     Thread.sleep(10000);
 
-    Long lastNumber = fibonacciNumbers.get(fibonacciNumbers.size() - 1);
-    return lastNumber;
+    Long lastFibonacciNumber = fibonacciNumbers.get(fibonacciNumbers.size() - 1);
+    return lastFibonacciNumber;
   }
 }
