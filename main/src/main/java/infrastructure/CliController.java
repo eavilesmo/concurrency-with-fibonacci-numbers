@@ -29,7 +29,7 @@ public class CliController extends Thread {
         runProgram();
         break;
       case "1":
-        System.out.println("Please introduce the number you want to calculate: ");
+        cliPresenter.askUserForFibonacciCalculationNumber();
         Runnable runnable = () -> {
           try {
             long result = fibonacciNumbers.generate(getUserInput());

@@ -28,4 +28,8 @@ public class CliPresenter {
   public void displayNotValidOptionMessage() {
     System.out.println("Not a valid option, please try again.");
   }
+
+  public void askUserForFibonacciCalculationNumber() {
+    System.out.println("Please introduce the number you want to calculate: ");
+  }
 }
