@@ -30,6 +30,7 @@ public class CliController extends Thread {
         for (Thread thread : threads) {
           System.out.println(thread.getId() + " - " + thread.getName());
         }
+        startProgram();
         break;
       case "1":
         Runnable runnable = () -> {
@@ -42,6 +43,7 @@ public class CliController extends Thread {
         };
         Thread thread = new Thread(runnable);
         threads.add(thread);
+        startProgram();
         break;
       case "2":
         System.out.println("Please introduce the number of the thread you want to start");
@@ -49,14 +51,16 @@ public class CliController extends Thread {
         int index = Integer.parseInt(input);
         threads.get(index).start();
         System.out.println("Thread started: " + threads.get(index).getName());
+        startProgram();
         break;
       case "3":
         for (Long result : results) {
           System.out.println(result);
         }
+        startProgram();
+        break;
       case "4":
         break;
     }
-    startProgram();
   }
 }
