@@ -15,8 +15,7 @@ public class FibonacciNumbers {
       Long almostLastElement = fibonacciNumbers.get(fibonacciNumbers.size() - 2);
       fibonacciNumbers.add(lastElement + almostLastElement);
     }
-
-    System.out.println(fibonacciNumbers.get(fibonacciNumbers.size() - 1));
+    
     Thread.sleep(10000);
 
     return fibonacciNumbers.get(fibonacciNumbers.size() - 1);
