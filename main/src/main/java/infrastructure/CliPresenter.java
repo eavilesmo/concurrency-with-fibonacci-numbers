@@ -1,5 +1,7 @@
 package infrastructure;
 
+import java.util.ArrayList;
+
 public class CliPresenter {
 
   public void displayOptions() {
@@ -9,5 +11,11 @@ public class CliPresenter {
     System.out.println("2 - Start a task");
     System.out.println("3 - See results of completed tasks");
     System.out.println("4 - Exit program");
+  }
+
+  public void displayThreads(ArrayList<Thread> threads) {
+    for (Thread thread : threads) {
+      System.out.println(thread.getId() + " - " + thread.getName());
+    }
   }
 }

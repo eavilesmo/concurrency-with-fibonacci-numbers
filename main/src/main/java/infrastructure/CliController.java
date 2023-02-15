@@ -27,9 +27,7 @@ public class CliController extends Thread {
   private void decideNextOption(String userInput) {
     switch (userInput) {
       case "0":
-        for (Thread thread : threads) {
-          System.out.println(thread.getId() + " - " + thread.getName());
-        }
+        cliPresenter.displayThreads(threads);
         startProgram();
         break;
       case "1":
