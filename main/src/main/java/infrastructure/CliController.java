@@ -30,17 +30,7 @@ public class CliController extends Thread {
         break;
       case "1":
         cliPresenter.askUserForFibonacciCalculationNumber();
-        String number = getUserInput();
-        Runnable runnable = () -> {
-          try {
-            long result = fibonacciNumbers.generate(number);
-            results.add(result);
-          } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-          }
-        };
-        Thread thread = new Thread(runnable);
-        threads.add(thread);
+        createThread();
         runProgram();
         break;
       case "2":
@@ -60,6 +50,20 @@ public class CliController extends Thread {
         cliPresenter.displayNotValidOptionMessage();
         runProgram();
     }
+  }
+
+  private void createThread() {
+    String number = getUserInput();
+    Runnable runnable = () -> {
+      try {
+        long result = fibonacciNumbers.generate(number);
+        results.add(result);
+      } catch (InterruptedException e) {
+        throw new RuntimeException(e);
+      }
+    };
+    Thread thread = new Thread(runnable);
+    threads.add(thread);
   }
 
   private String getUserInput() {
