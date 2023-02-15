@@ -2,6 +2,7 @@ package infrastructure;
 
 import domain.FibonacciNumbers;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class CliController extends Thread {
@@ -15,6 +16,7 @@ public class CliController extends Thread {
   }
 
   private final ArrayList<Thread> threads = new ArrayList<>();
+  private final HashMap<Integer, String> threadData = new HashMap<>();
   private final ArrayList<Long> results = new ArrayList<>();
 
   public void runProgram() {
@@ -25,7 +27,7 @@ public class CliController extends Thread {
   private void decideNextOption(String userInput) {
     switch (userInput) {
       case "0":
-        cliPresenter.displayThreads(threads);
+        cliPresenter.displayThreads(threadData);
         runProgram();
         break;
 
@@ -69,7 +71,11 @@ public class CliController extends Thread {
       }
     };
     Thread thread = new Thread(runnable);
+    String threadName = String.valueOf(threads.size());
+    thread.setName(threadName);
     threads.add(thread);
+    int threadIndex = Integer.parseInt(thread.getName());
+    threadData.put(threadIndex, number);
   }
 
   private String getUserInput() {

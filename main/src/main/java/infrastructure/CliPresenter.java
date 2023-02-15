@@ -1,6 +1,7 @@
 package infrastructure;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CliPresenter {
 
@@ -15,9 +16,10 @@ public class CliPresenter {
     System.out.println();
   }
 
-  public void displayThreads(ArrayList<Thread> threads) {
-    for (Thread thread : threads) {
-      System.out.println(thread.getId() + " - " + thread.getName());
+  public void displayThreads(HashMap<Integer, String> threadData) {
+    System.out.println();
+    for (int index = 0; index < threadData.size(); index++) {
+      System.out.println(index + " - Calculate Fibonacci numbers until " + threadData.get(index));
     }
   }
 
