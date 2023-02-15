@@ -8,6 +8,7 @@ public class Main {
     CliPresenter cliPresenter = new CliPresenter();
     FibonacciNumbers fibonacciNumbers = new FibonacciNumbers();
     CliController cliController = new CliController(cliPresenter, fibonacciNumbers);
+
     cliController.runProgram();
   }
 }

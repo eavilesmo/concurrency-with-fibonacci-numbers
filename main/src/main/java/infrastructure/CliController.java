@@ -27,12 +27,12 @@ public class CliController extends Thread {
   private void decideNextOption(String userInput) {
     switch (userInput) {
       case "0":
-        cliPresenter.displayThreads(threadData);
+        cliPresenter.displayTasks(threadData);
         runProgram();
         break;
 
       case "1":
-        cliPresenter.askUserForFibonacciCalculationNumber();
+        cliPresenter.askUserForFibonacciCalculationLimitNumber();
         createThread();
         runProgram();
         break;

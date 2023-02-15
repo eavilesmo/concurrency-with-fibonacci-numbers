@@ -16,7 +16,7 @@ public class CliPresenter {
     System.out.println();
   }
 
-  public void displayThreads(HashMap<Integer, String> threadData) {
+  public void displayTasks(HashMap<Integer, String> threadData) {
     System.out.println();
     for (int index = 0; index < threadData.size(); index++) {
       System.out.println(index + " - Calculate Fibonacci numbers until " + threadData.get(index));
@@ -32,12 +32,12 @@ public class CliPresenter {
 
   public void displayNotValidOptionMessage() {
     System.out.println();
-    System.out.println("Not a valid option, please try again.");
+    System.out.println("You introduced an invalid option, please try again.");
   }
 
-  public void askUserForFibonacciCalculationNumber() {
+  public void askUserForFibonacciCalculationLimitNumber() {
     System.out.println();
-    System.out.println("Please introduce the number you want to calculate: ");
+    System.out.println("Please introduce the limit number for the Fibonacci calculation: ");
   }
 
   public void askUserForTaskToStart() {
