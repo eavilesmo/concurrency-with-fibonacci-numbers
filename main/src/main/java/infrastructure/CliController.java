@@ -17,7 +17,7 @@ public class CliController extends Thread {
   private final ArrayList<Thread> threads = new ArrayList<>();
   private final ArrayList<Long> results = new ArrayList<>();
 
-  public void startProgram() {
+  public void runProgram() {
     cliPresenter.displayOptions();
     decideNextOption(getUserInput());
   }
@@ -26,7 +26,7 @@ public class CliController extends Thread {
     switch (userInput) {
       case "0":
         cliPresenter.displayThreads(threads);
-        startProgram();
+        runProgram();
         break;
       case "1":
         System.out.println("Please introduce the number you want to calculate: ");
@@ -40,24 +40,24 @@ public class CliController extends Thread {
         };
         Thread thread = new Thread(runnable);
         threads.add(thread);
-        startProgram();
+        runProgram();
         break;
       case "2":
         System.out.println("Please introduce the number of the thread you want to start");
         int index = Integer.parseInt(getUserInput());
         threads.get(index).start();
         System.out.println("Thread started: " + threads.get(index).getName());
-        startProgram();
+        runProgram();
         break;
       case "3":
         cliPresenter.displayResults(results);
-        startProgram();
+        runProgram();
         break;
       case "4":
         break;
       default:
         cliPresenter.displayNotValidOptionMessage();
-        startProgram();
+        runProgram();
     }
   }
 
