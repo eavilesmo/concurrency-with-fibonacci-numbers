@@ -4,20 +4,21 @@ import java.util.ArrayList;
 
 public class FibonacciNumbers {
 
-  public long generate(String inputNumber) throws InterruptedException {
+  public long generate(String userInput) throws InterruptedException {
     ArrayList<Long> fibonacciNumbers = new ArrayList<>();
     fibonacciNumbers.add(0L);
     fibonacciNumbers.add(1L);
 
-    int input = Integer.parseInt(inputNumber);
-    while (fibonacciNumbers.size() <= input) {
-      Long lastElement = fibonacciNumbers.get(fibonacciNumbers.size() - 1);
-      Long almostLastElement = fibonacciNumbers.get(fibonacciNumbers.size() - 2);
-      fibonacciNumbers.add(lastElement + almostLastElement);
+    int limitNumber = Integer.parseInt(userInput);
+    while (fibonacciNumbers.size() <= limitNumber) {
+      Long nextToLastNumber = fibonacciNumbers.get(fibonacciNumbers.size() - 2);
+      Long lastNumber = fibonacciNumbers.get(fibonacciNumbers.size() - 1);
+      fibonacciNumbers.add(lastNumber + nextToLastNumber);
     }
-    
+
     Thread.sleep(10000);
 
-    return fibonacciNumbers.get(fibonacciNumbers.size() - 1);
+    Long lastNumber = fibonacciNumbers.get(fibonacciNumbers.size() - 1);
+    return lastNumber;
   }
 }
