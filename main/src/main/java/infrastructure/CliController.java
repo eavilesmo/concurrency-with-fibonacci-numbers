@@ -54,9 +54,7 @@ public class CliController extends Thread {
         startProgram();
         break;
       case "3":
-        for (Long result : results) {
-          System.out.println(result);
-        }
+        cliPresenter.displayResults(results);
         startProgram();
         break;
       case "4":

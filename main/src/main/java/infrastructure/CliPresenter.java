@@ -18,4 +18,10 @@ public class CliPresenter {
       System.out.println(thread.getId() + " - " + thread.getName());
     }
   }
+
+  public void displayResults(ArrayList<Long> results) {
+    for (Long result : results) {
+      System.out.println(result);
+    }
+  }
 }
