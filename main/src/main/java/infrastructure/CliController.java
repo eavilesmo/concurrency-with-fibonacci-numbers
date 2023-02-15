@@ -30,9 +30,10 @@ public class CliController extends Thread {
         break;
       case "1":
         cliPresenter.askUserForFibonacciCalculationNumber();
+        String number = getUserInput();
         Runnable runnable = () -> {
           try {
-            long result = fibonacciNumbers.generate(getUserInput());
+            long result = fibonacciNumbers.generate(number);
             results.add(result);
           } catch (InterruptedException e) {
             throw new RuntimeException(e);
