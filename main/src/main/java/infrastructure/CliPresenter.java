@@ -1,5 +1,6 @@
 package infrastructure;
 
+import domain.Calculation;
 import java.util.ArrayList;
 import java.util.HashMap;
 

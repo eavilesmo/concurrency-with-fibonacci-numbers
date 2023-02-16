@@ -1,5 +1,6 @@
 package infrastructure;
 
+import domain.Calculation;
 import domain.FibonacciNumbers;
 import java.util.ArrayList;
 import java.util.HashMap;
